@@ -1,0 +1,15 @@
+{
+  "user": {
+    "id": 123,
+    "name": "Asha",
+    "active": true,
+    "address": {
+      "city": "Bhopal",
+      "pin": 462003
+    },
+    "items": [
+      { "name": "apple", "qty": 3 },
+      { "name": "banana", "qty": 5 }
+    ]
+  }
+}

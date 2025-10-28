@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import JsonInput from "./components/JsonInput";
+import TreeView from "./components/TreeView";
+
+import sample from "./sample.json";
+import { ReactFlowProvider } from "reactflow";
 
 export default function App() {
   const [jsonData, setJsonData] = useState("");
@@ -29,7 +33,39 @@ export default function App() {
             }}
             darkMode={darkMode}
           />
+
+          {/* <SearchBar
+            jsonData={jsonData}
+            onHighlight={(id, message) => {
+              setHighlightId(id);
+              setSearchResultText(message);
+            }}
+          />
+
+          <div className="mt-4 text-sm text-gray-600 dark:text-gray-300">
+            {searchResultText}
+          </div> */}
+
+          {/* <ControlsBar
+            onClear={() => {
+              setJsonData({});
+              setHighlightId(null);
+              setSearchResultText("");
+            }}
+            darkMode={darkMode}
+          /> */}
         </aside>
+
+        <main className="flex-1">
+          <ReactFlowProvider>
+            <TreeView
+              data={jsonData}
+              highlightId={highlightId}
+              highlightIdSetter={setHighlightId}
+              darkMode={darkMode}
+            />
+          </ReactFlowProvider>
+        </main>
       </div>
     </div>
   );
