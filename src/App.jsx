@@ -34,7 +34,7 @@ export default function App() {
             darkMode={darkMode}
           />
 
-          {/* <SearchBar
+          <SearchBar
             jsonData={jsonData}
             onHighlight={(id, message) => {
               setHighlightId(id);
@@ -44,7 +44,7 @@ export default function App() {
 
           <div className="mt-4 text-sm text-gray-600 dark:text-gray-300">
             {searchResultText}
-          </div> */}
+          </div>
 
           {/* <ControlsBar
             onClear={() => {
