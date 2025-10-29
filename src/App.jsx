@@ -3,7 +3,7 @@ import JsonInput from "./components/JsonInput";
 import TreeView from "./components/TreeView";
 import SearchBar from "./components/SearchBar";
 
-import sample from "./sample.json";
+import sample from "../public/sample.json";
 import { ReactFlowProvider } from "reactflow";
 
 export default function App() {

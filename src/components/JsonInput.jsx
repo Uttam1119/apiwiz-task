@@ -16,7 +16,7 @@ export default function JsonInput({ onVisualize, darkMode }) {
   };
 
   const loadSample = async () => {
-    const res = await fetch("/src/sample.json");
+    const res = await fetch("/sample.json");
     const json = await res.json();
     setText(JSON.stringify(json, null, 2));
   };
